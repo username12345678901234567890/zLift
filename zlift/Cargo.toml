@@ -1,0 +1,18 @@
+[package]
+name = "zlift"
+version = "0.1.0"
+edition = "2021"
+description = "The front door: devices, settings, running a CUDA program on this driver"
+
+[[bin]]
+name = "zlift"
+path = "src/main.rs"
+
+# No dependencies, on purpose. This has to build on a machine that has never
+# fetched a crate, it has to keep working when the rest of the tree is
+# half-built, and everything it needs — a Unix socket, a terminal in raw mode,
+# `dlopen` — is either in `std` or three lines of `extern "C"`.
+[dependencies]
+
+[profile.release]
+opt-level = 2
