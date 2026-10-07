@@ -1,3 +1,3 @@
 # zLift
 
-Intel on CUDA
+CUDA on Intel Arc Xe3
